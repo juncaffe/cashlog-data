@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashLog FX Server</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        :root { --primary: #6200EE; --bg: #F5F7FA; --surface: #ffffff; --text: #191F28; --sub-text: #8B95A1; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; line-height: 1.5; }
+        .container { max-width: 600px; margin: 0 auto; background: var(--surface); padding: 30px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        
+        /* Header */
+        header { margin-bottom: 30px; text-align: center; }
+        h1 { margin: 0; font-size: 24px; color: var(--text); display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .badge { background: #E8F3FF; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+        
+        /* Meta Info */
+        .meta-card { background: #F9FAFB; padding: 16px; border-radius: 12px; margin-bottom: 24px; font-size: 14px; color: var(--sub-text); display: flex; flex-direction: column; gap: 6px; }
+        .meta-row { display: flex; justify-content: space-between; }
+        .meta-value { font-weight: 600; color: var(--text); }
+
+        /* Table */
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 15px; }
+        th { text-align: left; padding: 12px 8px; color: var(--sub-text); font-weight: 500; font-size: 13px; border-bottom: 1px solid #eee; }
+        td { padding: 14px 8px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; }
+        tr:last-child td { border-bottom: none; }
+        
+        .flag-cell { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+        .unit { font-size: 12px; color: var(--sub-text); font-weight: normal; margin-left: 4px; }
+        .rate { font-family: 'Roboto Mono', monospace; font-weight: 600; color: var(--primary); text-align: right; }
+        
+        /* Footer */
+        footer { margin-top: 40px; text-align: center; font-size: 13px; color: var(--sub-text); }
+        a { color: var(--primary); text-decoration: none; }
+        .json-links { margin-top: 10px; display: flex; justify-content: center; gap: 10px; }
+        .json-btn { background: #eee; padding: 6px 12px; border-radius: 6px; color: var(--text); font-size: 12px; transition: 0.2s; }
+        .json-btn:hover { background: #ddd; }
+
+        /* Status */
+        #loading { text-align: center; padding: 40px; color: var(--sub-text); }
+        #error { display: none; background: #FFF5F5; color: #E03E3E; padding: 16px; border-radius: 12px; margin-bottom: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CashLog FX <span class="badge">LIVE</span></h1>
+            <p style="color: var(--sub-text); margin: 5px 0 0 0; font-size: 14px;">한국수출입은행 환율 정보</p>
+        </header>
+
+        <div id="error"></div>
+
+        <div id="dashboard" style="display: none;">
+            <div class="meta-card">
+                <div class="meta-row">
+                    <span>기준 일자</span>
+                    <span class="meta-value" id="searchDate">-</span>
+                </div>
+                <div class="meta-row">
+                    <span>최종 갱신 (한국시간)</span>
+                    <span class="meta-value" id="updatedAt">-</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>통화</th>
+                            <th style="text-align: right;">매매기준율</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rateBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="loading">
+            데이터를 불러오는 중입니다...
+        </div>
+
+        <footer>
+            <div>Data provided by Korea Exim Bank</div>
+            <div class="json-links">
+                <a href="fx/latest.json" class="json-btn">JSON (Latest)</a>
+                <a href="fx/meta.json" class="json-btn">JSON (Meta)</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 캐시 방지용 쿼리 스트링 추가 함수
+        const getUrl = (path) => `${path}?t=${new Date().getTime()}`;
+
+        async function init() {
+            try {
+                // 병렬 요청으로 속도 최적화
+                const [metaRes, ratesRes] = await Promise.all([
+                    fetch(getUrl('fx/meta.json')),
+                    fetch(getUrl('fx/latest.json'))
+                ]);
+
+                if (!metaRes.ok || !ratesRes.ok) throw new Error("데이터 로딩 실패");
+
+                const meta = await metaRes.json();
+                const rates = await ratesRes.json();
+
+                // 데이터 렌더링
+                document.getElementById('searchDate').textContent = meta.searchDate.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+                
+                const dateObj = new Date(meta.updatedAtKst);
+                document.getElementById('updatedAt').textContent = dateObj.toLocaleString('ko-KR');
+
+                const tbody = document.getElementById('rateBody');
+                tbody.innerHTML = '';
+
+                rates.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>
+                            <div class="flag-cell">
+                                ${item.cur_unit}
+                                <span class="unit">${item.cur_nm}</span>
+                            </div>
+                        </td>
+                        <td class="rate">${item.deal_bas_r}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('loading').style.display = 'none';
+                const errDiv = document.getElementById('error');
+                errDiv.textContent = "⚠️ 데이터 로드 실패: 아직 환율 정보가 생성되지 않았거나 오류가 발생했습니다.";
+                errDiv.style.display = 'block';
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
