@@ -1,177 +1,442 @@
 {
   "AED": {
-    "ko": "아랍에미리트 디르함",
-    "ja": "UAEディルハム",
-    "en": "UAE Dirham",
-    "zh-cn": "阿联酋迪拉姆",
-    "zh-tw": "阿聯酋迪拉姆"
+    "names": {
+      "ko": "아랍에미리트 디르함",
+      "ja": "UAEディルハム",
+      "en": "UAE Dirham",
+      "zh-cn": "阿联酋迪拉姆",
+      "zh-tw": "阿聯酋迪拉姆"
+    },
+    "symbol": "د.إ",
+    "display_symbol": "AED"
   },
   "AUD": {
-    "ko": "호주 달러",
-    "ja": "オーストラリアドル",
-    "en": "Australian Dollar",
-    "zh-cn": "澳大利亚元",
-    "zh-tw": "澳元"
+    "names": {
+      "ko": "호주 달러",
+      "ja": "オーストラリアドル",
+      "en": "Australian Dollar",
+      "zh-cn": "澳大利亚元",
+      "zh-tw": "澳元"
+    },
+    "symbol": "$",
+    "display_symbol": "A$"
   },
   "BHD": {
-    "ko": "바레인 디나르",
-    "ja": "バーレーンディナール",
-    "en": "Bahraini Dinar",
-    "zh-cn": "巴林第纳尔",
-    "zh-tw": "巴林第納爾"
+    "names": {
+      "ko": "바레인 디나르",
+      "ja": "バーレーンディナール",
+      "en": "Bahraini Dinar",
+      "zh-cn": "巴林第纳尔",
+      "zh-tw": "巴林第納爾"
+    },
+    "symbol": ".د.ب",
+    "display_symbol": "BHD"
   },
   "BND": {
-    "ko": "브루나이 달러",
-    "ja": "ブルネイドル",
-    "en": "Brunei Dollar",
-    "zh-cn": "文莱元",
-    "zh-tw": "汶萊元"
+    "names": {
+      "ko": "브루나이 달러",
+      "ja": "ブルネイドル",
+      "en": "Brunei Dollar",
+      "zh-cn": "文莱元",
+      "zh-tw": "汶萊元"
+    },
+    "symbol": "$",
+    "display_symbol": "B$"
+  },
+  "BRL": {
+    "names": {
+      "ko": "브라질 헤알",
+      "ja": "ブラジルレアル",
+      "en": "Brazilian Real",
+      "zh-cn": "巴西雷亚尔",
+      "zh-tw": "巴西里亞伊"
+    },
+    "symbol": "R$",
+    "display_symbol": "R$"
   },
   "CAD": {
-    "ko": "캐나다 달러",
-    "ja": "カナダドル",
-    "en": "Canadian Dollar",
-    "zh-cn": "加拿大元",
-    "zh-tw": "加元"
+    "names": {
+      "ko": "캐나다 달러",
+      "ja": "カナダドル",
+      "en": "Canadian Dollar",
+      "zh-cn": "加拿大元",
+      "zh-tw": "加元"
+    },
+    "symbol": "$",
+    "display_symbol": "C$"
   },
   "CHF": {
-    "ko": "스위스 프랑",
-    "ja": "スイスフラン",
-    "en": "Swiss Franc",
-    "zh-cn": "瑞士法郎",
-    "zh-tw": "瑞士法郎"
+    "names": {
+      "ko": "스위스 프랑",
+      "ja": "スイスフラン",
+      "en": "Swiss Franc",
+      "zh-cn": "瑞士法郎",
+      "zh-tw": "瑞士法郎"
+    },
+    "symbol": "CHF",
+    "display_symbol": "CHF"
   },
   "CNH": {
-    "ko": "위안화",
-    "ja": "人民元",
-    "en": "Chinese Yuan",
-    "zh-cn": "人民币",
-    "zh-tw": "人民幣"
+    "names": {
+      "ko": "위안화",
+      "ja": "人民元",
+      "en": "Chinese Yuan",
+      "zh-cn": "人民币",
+      "zh-tw": "人民幣"
+    },
+    "symbol": "¥",
+    "display_symbol": "CN¥"
+  },
+  "CNY": {
+    "names": {
+      "ko": "중국 위안",
+      "ja": "中国人民元",
+      "en": "Chinese Yuan",
+      "zh-cn": "人民币",
+      "zh-tw": "人民幣"
+    },
+    "symbol": "¥",
+    "display_symbol": "CN¥"
+  },
+  "CZK": {
+    "names": {
+      "ko": "체코 코루나",
+      "ja": "チェココルナ",
+      "en": "Czech Koruna",
+      "zh-cn": "捷克克朗",
+      "zh-tw": "捷克克朗"
+    },
+    "symbol": "Kč",
+    "display_symbol": "Kč"
   },
   "DKK": {
-    "ko": "덴마크 크로네",
-    "ja": "デンマーククローネ",
-    "en": "Danish Krone",
-    "zh-cn": "丹麦克朗",
-    "zh-tw": "丹麥克朗"
+    "names": {
+      "ko": "덴마크 크로네",
+      "ja": "デンマーククローネ",
+      "en": "Danish Krone",
+      "zh-cn": "丹麦克朗",
+      "zh-tw": "丹麥克朗"
+    },
+    "symbol": "kr",
+    "display_symbol": "DKK"
+  },
+  "EGP": {
+    "names": {
+      "ko": "이집트 파운드",
+      "ja": "エジプトポンド",
+      "en": "Egyptian Pound",
+      "zh-cn": "埃及镑",
+      "zh-tw": "埃及鎊"
+    },
+    "symbol": "E£",
+    "display_symbol": "E£"
   },
   "EUR": {
-    "ko": "유로",
-    "ja": "ユーロ",
-    "en": "Euro",
-    "zh-cn": "欧元",
-    "zh-tw": "歐元"
+    "names": {
+      "ko": "유로",
+      "ja": "ユーロ",
+      "en": "Euro",
+      "zh-cn": "欧元",
+      "zh-tw": "歐元"
+    },
+    "symbol": "€",
+    "display_symbol": "€"
   },
   "GBP": {
-    "ko": "영국 파운드",
-    "ja": "イギリスポンド",
-    "en": "British Pound",
-    "zh-cn": "英镑",
-    "zh-tw": "英鎊"
+    "names": {
+      "ko": "영국 파운드",
+      "ja": "イギリスポンド",
+      "en": "British Pound",
+      "zh-cn": "英镑",
+      "zh-tw": "英鎊"
+    },
+    "symbol": "£",
+    "display_symbol": "£"
   },
   "HKD": {
-    "ko": "홍콩 달러",
-    "ja": "香港ドル",
-    "en": "Hong Kong Dollar",
-    "zh-cn": "港元",
-    "zh-tw": "港元"
+    "names": {
+      "ko": "홍콩 달러",
+      "ja": "香港ドル",
+      "en": "Hong Kong Dollar",
+      "zh-cn": "港元",
+      "zh-tw": "港元"
+    },
+    "symbol": "$",
+    "display_symbol": "HK$"
   },
-  "IDR(100)": {
-    "ko": "인도네시아 루피아",
-    "ja": "インドネシアルピア",
-    "en": "Indonesian Rupiah",
-    "zh-cn": "印尼卢比",
-    "zh-tw": "印尼盧比"
+  "HUF": {
+    "names": {
+      "ko": "헝가리 포린트",
+      "ja": "ハンガリーフォリント",
+      "en": "Hungarian Forint",
+      "zh-cn": "匈牙利福林",
+      "zh-tw": "匈牙利福林"
+    },
+    "symbol": "Ft",
+    "display_symbol": "Ft"
   },
-  "JPY(100)": {
-    "ko": "일본 엔",
-    "ja": "日本円",
-    "en": "Japanese Yen",
-    "zh-cn": "日元",
-    "zh-tw": "日圓"
+  "IDR": {
+    "names": {
+      "ko": "인도네시아 루피아",
+      "ja": "インドネシアルピア",
+      "en": "Indonesian Rupiah",
+      "zh-cn": "印尼卢比",
+      "zh-tw": "印尼盧比"
+    },
+    "symbol": "Rp",
+    "display_symbol": "Rp"
+  },
+  "ILS": {
+    "names": {
+      "ko": "이스라엘 신 셰켈",
+      "ja": "イスラエル新シェケル",
+      "en": "Israeli New Shekel",
+      "zh-cn": "以色列新谢克尔",
+      "zh-tw": "以色列新謝克爾"
+    },
+    "symbol": "₪",
+    "display_symbol": "₪"
+  },
+  "INR": {
+    "names": {
+      "ko": "인도 루피",
+      "ja": "インドルピー",
+      "en": "Indian Rupee",
+      "zh-cn": "印度卢比",
+      "zh-tw": "印度盧比"
+    },
+    "symbol": "₹",
+    "display_symbol": "₹"
+  },
+  "JPY": {
+    "names": {
+      "ko": "일본 엔",
+      "ja": "日本円",
+      "en": "Japanese Yen",
+      "zh-cn": "日元",
+      "zh-tw": "日圓"
+    },
+    "symbol": "¥",
+    "display_symbol": "JP¥"
   },
   "KRW": {
-    "ko": "한국 원",
-    "ja": "韓国ウォン",
-    "en": "South Korean Won",
-    "zh-cn": "韩元",
-    "zh-tw": "韓元"
-  },
-  "KRW(100)": {
-    "ko": "한국 원",
-    "ja": "韓国ウォン",
-    "en": "South Korean Won",
-    "zh-cn": "韩元",
-    "zh-tw": "韓元"
+    "names": {
+      "ko": "한국 원",
+      "ja": "韓国ウォン",
+      "en": "South Korean Won",
+      "zh-cn": "韩元",
+      "zh-tw": "韓元"
+    },
+    "symbol": "₩",
+    "display_symbol": "₩"
   },
   "KWD": {
-    "ko": "쿠웨이트 디나르",
-    "ja": "クウェートディナール",
-    "en": "Kuwaiti Dinar",
-    "zh-cn": "科威特第纳尔",
-    "zh-tw": "科威特第納爾"
+    "names": {
+      "ko": "쿠웨이트 디나르",
+      "ja": "クウェートディナール",
+      "en": "Kuwaiti Dinar",
+      "zh-cn": "科威特第纳尔",
+      "zh-tw": "科威特第納爾"
+    },
+    "symbol": "د.ك",
+    "display_symbol": "KWD"
+  },
+  "MOP": {
+    "names": {
+      "ko": "마카오 파타카",
+      "ja": "マカオパタカ",
+      "en": "Macanese Pataca",
+      "zh-cn": "澳门元",
+      "zh-tw": "澳門元"
+    },
+    "symbol": "P",
+    "display_symbol": "MOP$"
+  },
+  "MXN": {
+    "names": {
+      "ko": "멕시코 페소",
+      "ja": "メキシコペソ",
+      "en": "Mexican Peso",
+      "zh-cn": "墨西哥比索",
+      "zh-tw": "墨西哥披索"
+    },
+    "symbol": "$",
+    "display_symbol": "MX$"
   },
   "MYR": {
-    "ko": "말레이시아 링깃",
-    "ja": "マレーシアリンギット",
-    "en": "Malaysian Ringgit",
-    "zh-cn": "马来西亚林吉特",
-    "zh-tw": "馬來西亞令吉"
+    "names": {
+      "ko": "말레이시아 링깃",
+      "ja": "マレーシアリンギット",
+      "en": "Malaysian Ringgit",
+      "zh-cn": "马来西亚林吉特",
+      "zh-tw": "馬來西亞令吉"
+    },
+    "symbol": "RM",
+    "display_symbol": "RM"
   },
   "NOK": {
-    "ko": "노르웨이 크로네",
-    "ja": "ノルウェークローネ",
-    "en": "Norwegian Krone",
-    "zh-cn": "挪威克朗",
-    "zh-tw": "挪威克朗"
+    "names": {
+      "ko": "노르웨이 크로네",
+      "ja": "ノルウェークローネ",
+      "en": "Norwegian Krone",
+      "zh-cn": "挪威克朗",
+      "zh-tw": "挪威克朗"
+    },
+    "symbol": "kr",
+    "display_symbol": "NOK"
   },
   "NZD": {
-    "ko": "뉴질랜드 달러",
-    "ja": "ニュージーランドドル",
-    "en": "New Zealand Dollar",
-    "zh-cn": "新西兰元",
-    "zh-tw": "紐西蘭元"
+    "names": {
+      "ko": "뉴질랜드 달러",
+      "ja": "ニュージーランドドル",
+      "en": "New Zealand Dollar",
+      "zh-cn": "新西兰元",
+      "zh-tw": "紐西蘭元"
+    },
+    "symbol": "$",
+    "display_symbol": "NZ$"
+  },
+  "PHP": {
+    "names": {
+      "ko": "필리핀 페소",
+      "ja": "フィリピンペソ",
+      "en": "Philippine Peso",
+      "zh-cn": "菲律宾比索",
+      "zh-tw": "菲律賓披索"
+    },
+    "symbol": "₱",
+    "display_symbol": "₱"
+  },
+  "PKR": {
+    "names": {
+      "ko": "파키스탄 루피",
+      "ja": "パキスタンルピー",
+      "en": "Pakistani Rupee",
+      "zh-cn": "巴基斯坦卢比",
+      "zh-tw": "巴基斯坦盧比"
+    },
+    "symbol": "₨",
+    "display_symbol": "PKR"
+  },
+  "PLN": {
+    "names": {
+      "ko": "폴란드 즈워티",
+      "ja": "ポーランドズウォティ",
+      "en": "Polish Zloty",
+      "zh-cn": "波兰兹罗提",
+      "zh-tw": "波蘭茲羅提"
+    },
+    "symbol": "zł",
+    "display_symbol": "zł"
+  },
+  "RUB": {
+    "names": {
+      "ko": "러시아 루블",
+      "ja": "ロシアルーブル",
+      "en": "Russian Ruble",
+      "zh-cn": "俄罗斯卢布",
+      "zh-tw": "俄羅斯盧布"
+    },
+    "symbol": "₽",
+    "display_symbol": "₽"
   },
   "SAR": {
-    "ko": "사우디 리얄",
-    "ja": "サウジアラビアリヤル",
-    "en": "Saudi Riyal",
-    "zh-cn": "沙特里亚尔",
-    "zh-tw": "沙烏地里亞爾"
+    "names": {
+      "ko": "사우디 리얄",
+      "ja": "サウジアラビアリヤル",
+      "en": "Saudi Riyal",
+      "zh-cn": "沙特里亚尔",
+      "zh-tw": "沙烏地里亞爾"
+    },
+    "symbol": "﷼",
+    "display_symbol": "SAR"
   },
   "SEK": {
-    "ko": "스웨덴 크로나",
-    "ja": "スウェーデンクローナ",
-    "en": "Swedish Krona",
-    "zh-cn": "瑞典克朗",
-    "zh-tw": "瑞典克朗"
+    "names": {
+      "ko": "스웨덴 크로나",
+      "ja": "スウェーデンクローナ",
+      "en": "Swedish Krona",
+      "zh-cn": "瑞典克朗",
+      "zh-tw": "瑞典克朗"
+    },
+    "symbol": "kr",
+    "display_symbol": "SEK"
   },
   "SGD": {
-    "ko": "싱가포르 달러",
-    "ja": "シンガポールドル",
-    "en": "Singapore Dollar",
-    "zh-cn": "新加坡元",
-    "zh-tw": "新加坡元"
+    "names": {
+      "ko": "싱가포르 달러",
+      "ja": "シンガポールドル",
+      "en": "Singapore Dollar",
+      "zh-cn": "新加坡元",
+      "zh-tw": "新加坡元"
+    },
+    "symbol": "$",
+    "display_symbol": "S$"
   },
   "THB": {
-    "ko": "태국 바트",
-    "ja": "タイバーツ",
-    "en": "Thai Baht",
-    "zh-cn": "泰铢",
-    "zh-tw": "泰銖"
+    "names": {
+      "ko": "태국 바트",
+      "ja": "タイバーツ",
+      "en": "Thai Baht",
+      "zh-cn": "泰铢",
+      "zh-tw": "泰銖"
+    },
+    "symbol": "฿",
+    "display_symbol": "฿"
+  },
+  "TRY": {
+    "names": {
+      "ko": "튀르키예 리라",
+      "ja": "トルコリラ",
+      "en": "Turkish Lira",
+      "zh-cn": "土耳其里拉",
+      "zh-tw": "土耳其里拉"
+    },
+    "symbol": "₺",
+    "display_symbol": "₺"
+  },
+  "TWD": {
+    "names": {
+      "ko": "대만 달러",
+      "ja": "台湾ドル",
+      "en": "New Taiwan Dollar",
+      "zh-cn": "新台币",
+      "zh-tw": "新臺幣"
+    },
+    "symbol": "$",
+    "display_symbol": "NT$"
   },
   "USD": {
-    "ko": "미국 달러",
-    "ja": "USドル",
-    "en": "US Dollar",
-    "zh-cn": "美元",
-    "zh-tw": "美元"
+    "names": {
+      "ko": "미국 달러",
+      "ja": "USドル",
+      "en": "US Dollar",
+      "zh-cn": "美元",
+      "zh-tw": "美元"
+    },
+    "symbol": "$",
+    "display_symbol": "US$"
   },
-  "VND(100)": {
-    "ko": "베트남 동",
-    "ja": "ベトナムドン",
-    "en": "Vietnamese Dong",
-    "zh-cn": "越南盾",
-    "zh-tw": "越南盾"
+  "VND": {
+    "names": {
+      "ko": "베트남 동",
+      "ja": "ベトナムドン",
+      "en": "Vietnamese Dong",
+      "zh-cn": "越南盾",
+      "zh-tw": "越南盾"
+    },
+    "symbol": "₫",
+    "display_symbol": "₫"
+  },
+  "ZAR": {
+    "names": {
+      "ko": "남아프리카공화국 랜드",
+      "ja": "南アフリカランド",
+      "en": "South African Rand",
+      "zh-cn": "南非兰特",
+      "zh-tw": "南非蘭特"
+    },
+    "symbol": "R",
+    "display_symbol": "ZAR"
   }
 }
