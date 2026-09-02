@@ -1,5 +1,5 @@
 {
-  "updatedAtKst": "2026-09-02T12:44:56+09:00",
+  "updatedAtKst": "2026-09-02T14:50:26+09:00",
   "basDt": "20260901",
   "source": "financial-services-commission-stock-price-api",
   "endpoint": "getStockPriceInfo",
@@ -19,12 +19,7 @@
     "srtnCd",
     "itmsNm",
     "mrktCtg",
-    "clpr",
-    "vs",
-    "fltRt",
-    "mkp",
-    "hipr",
-    "lopr"
+    "clpr"
   ],
   "rawFields": [
     "basDt",
