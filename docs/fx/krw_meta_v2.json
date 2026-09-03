@@ -1,7 +1,7 @@
 {
-  "updatedAtKst": "2026-09-02T16:19:55+0900",
+  "updatedAtKst": "2026-09-03T16:23:02+0900",
   "searchDate": "",
-  "searchDateIso": "2026-09-02",
+  "searchDateIso": "2026-09-03",
   "source": "koreaexim-oapi+frankfurter",
   "data": "AP01",
   "base": "KRW",
@@ -95,6 +95,7 @@
     "KGS",
     "KHR",
     "KMF",
+    "KPW",
     "KRW",
     "KWD",
     "KYD",
@@ -187,11 +188,11 @@
   "counts": {
     "total": 159,
     "koreaexim_count": 0,
-    "frankfurter_seen_count": 164,
+    "frankfurter_seen_count": 165,
     "frankfurter_added_or_updated_count": 0,
     "retained_existing_count": 0,
     "excluded_count": 5,
-    "missing_currency_name_count": 159,
+    "missing_currency_name_count": 160,
     "invalid_rate_count": 0
   }
 }
