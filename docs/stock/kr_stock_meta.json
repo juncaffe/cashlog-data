@@ -1,6 +1,6 @@
 {
-  "updatedAtKst": "2026-09-08T18:58:12+09:00",
-  "basDt": "20260907",
+  "updatedAtKst": "2026-09-09T18:05:24+09:00",
+  "basDt": "20260908",
   "source": "financial-services-commission-stock-price-api",
   "endpoint": "getStockPriceInfo",
   "count": 2873,
@@ -12,7 +12,7 @@
   "files": {
     "compact": "kr_stock_prices.json",
     "raw": "kr_stock_prices_raw.json",
-    "history": "history/kr/2026/09/07.json"
+    "history": "history/kr/2026/09/08.json"
   },
   "compactFields": [
     "srtnCd",
